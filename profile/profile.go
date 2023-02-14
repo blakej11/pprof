@@ -580,15 +580,15 @@ func (p *Profile) String() string {
 
 	ss = append(ss, "Mappings")
 	for _, m := range p.Mapping {
-		ss = append(ss, m.string())
+		ss = append(ss, m.String())
 	}
 
 	return strings.Join(ss, "\n") + "\n"
 }
 
-// string dumps a text representation of a mapping. Intended mainly
+// String dumps a text representation of a mapping. Intended mainly
 // for debugging purposes.
-func (m *Mapping) string() string {
+func (m *Mapping) String() string {
 	bits := ""
 	if m.HasFunctions {
 		bits = bits + "[FN]"
